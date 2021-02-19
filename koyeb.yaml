@@ -1,4 +1,4 @@
 functions:
-  - name: koyeb.test
+  - name: koyeb-test
     runtime: python3.8
-    handler: koyeb.test.handler
+    handler: koyeb-test.handler
