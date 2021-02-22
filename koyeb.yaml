@@ -1,6 +1,14 @@
+#functions:
+#  - name: koyeb-test
+#    runtime: python3.8
+#    handler: koyeb-test.handler
+#    volumes:
+#      - store: testing-image-processing
 functions:
-  - name: koyeb-test
+  - name: "hello-word" # The function name
     runtime: python3.8
     handler: koyeb-test.handler
-    volumes:
-      - store: testing-image-processing
+    events: # The event configuration to trigger the function
+      - store:
+          name: testing-image-processing
+          event: "s3:ObjectCreated:*"
