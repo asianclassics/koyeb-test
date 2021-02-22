@@ -8,6 +8,7 @@ functions:
   - name: "hello-word" # The function name
     runtime: python3.8
     handler: koyeb-test.handler
+    args: ["env | grep STORE_testing-image-processing"]
     events: # The event configuration to trigger the function
       - store:
           name: testing-image-processing
